@@ -1,57 +1,53 @@
 import java.util.Locale;
 import java.util.Scanner;
 
-public class soma_matrizes {
-
+public class soma_matrizes{
     public static void main(String[] args) {
-
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
         int linha, coluna;
-
-        System.out.print("Quantas linhas vai ter cada matriz? ");
+        //gustavo god or leticia trash
+        System.out.println("Quantas linhas terá a matriz?");
         linha = sc.nextInt();
-        System.out.print("Quantas colunas vai ter cada matriz? ");
+        System.out.println("Quantas colunas terá a matriz?");
         coluna = sc.nextInt();
 
-        int[][] a = new int[linha][coluna];
-        int[][] b = new int[linha][coluna];
-        int[][] c = new int[linha][coluna];
+        int[][] A = new int[linha][coluna];
+        int[][] B = new int[linha][coluna];
+        int[][] C = new int[linha][coluna];
 
         System.out.println("Digite os valores da matriz A:");
 
-        for (int i = 0; i < linha; i++) {
-            for (int j = 0; j < coluna; j++) {
+        for(int i = 0; i < linha; i++){
+            for(int j = 0; j < coluna; j++){
                 System.out.printf("Elemento [%d,%d]: ", i, j);
-                a[i][j] = sc.nextInt();
+                A[i][j] = sc.nextInt();
             }
         }
 
         System.out.println("Digite os valores da matriz B:");
 
-        for (int i = 0; i < linha; i++) {
-            for (int j = 0; j < coluna; j++) {
+        for(int i = 0; i < linha; i++){
+            for(int j = 0; j < coluna; j++){
                 System.out.printf("Elemento [%d,%d]: ", i, j);
-                b[i][j] = sc.nextInt();
+                B[i][j] = sc.nextInt();
             }
         }
 
-        for (int i = 0; i < linha; i++) {
-            for (int j = 0; j < coluna; j++) {
-                c[i][j] = a[i][j] + b[i][j];
+        for(int i = 0; i < linha; i++){
+            for(int j = 0; j < coluna; j++){
+                C[i][j] = A[i][j] + B[i][j];
             }
         }
 
-        System.out.println("MATRIZ SOMA:");
+        System.out.println("SOMA DAS MATRIZES: ");
 
-        for (int i = 0; i < linha; i++) {
-            for (int j = 0; j < coluna; j++) {
-                System.out.printf("%d ", c[i][j]);
+        for(int i = 0; i < linha; i++){
+            for(int j = 0; j < coluna; j++){
+                System.out.printf("%d ", C[i][j]);
             }
             System.out.println();
         }
-
-        sc.close();
     }
 }
